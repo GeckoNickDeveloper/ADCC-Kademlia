@@ -55,11 +55,24 @@ Altre funzionalità:
 
 
 
-<!-- TECNOLOGIA -->
-## Tecnologia
-<!-- DEPENDANCES -->
-### Dependances
+<!-- SCELTE IMPLEMENTATIVE -->
+## Scele implementative
+
+* k = numero di posizioni disponibili nel k_bucket, è stato scelto 20
 
 ```erl
 % codice
 ```
+
+
+
+
+
+1. Inizializzare la rete
+    Il primo nodo aggiunto diventa il bootstrap node: creo la K-bucket con {ID, PID}, con distanza in xor = 0
+2. Aggiungere nodi con join{ID, PID}:
+    * Se la rete è vuota , BOOTSTRAP NODE
+    * se non è vuota -> join{ID} 
+
+
+The state will store a list of connected nodes
